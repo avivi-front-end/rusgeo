@@ -2,7 +2,7 @@
 .mbox
     .sidebar
     .right-column-main
-        include breadcrumbs.pug
+        include breadcrumbs-catalog.pug
         .product-cart
             .product-cart__title Электронный теодолит RGK T-02 (с целеуказателем)
             .product-cart__wrapper
@@ -63,9 +63,11 @@
                         span Выбрать опции
                     .product-cart__buy-wrapper
                         a(href="#").product-cart__to-cart
-                            +icon('cart')
-                            span В корзину
-                        a(href="#").product-cart__fast-buy Купить в 1 клик   
+                            span
+                                +icon('cart')
+                                | В корзину 
+                        a(href="#").product-cart__fast-buy 
+                            span Купить в 1 клик   
                     .product-cart__shiping
                         .product-cart__shiping-item
                             a(href="#tab-6").js-tab-link.js-option.product-cart__shiping-name.product-cart__shiping-name--semi 
@@ -262,7 +264,9 @@
                             .product-config__price-all.
                                 Итого: <span>67490 р. </span>
                             a(href="#").product-cart__to-cart.product-cart__to-cart--config
-                                span В корзину       
+                                span
+                                    +icon('cart')
+                                    | В корзину  
                 a(href="#").product-tabs__mobile-tabs
                     span.product-tabs__mobile-name Отзывы
                     span.product-tabs__mobile-icon

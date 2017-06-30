@@ -1736,8 +1736,8 @@ transition: bottom 300ms ease;
     <div class="page-body" id="page-body">
       <div class="mbox">
         <div class="sidebar"></div>
-        <div class="right-column-main">
-          <ul class="breadcrumbs-new">
+        <div class="right-column-main"><a class="breadcrumbs-new__back" href="#">Назад</a>
+          <ul class="breadcrumbs-new breadcrumbs-new--catalog">
             <li class="breadcrumbs-new__item"><a class="breadcrumbs-new__link" href="#">Главная страница</a></li>
             <li class="breadcrumbs-new__item"><a class="breadcrumbs-new__link" href="#">Геодезическое оборудование</a></li>
             <li class="breadcrumbs-new__item"><a class="breadcrumbs-new__link" href="#">Теодолиты</a></li>
@@ -1792,10 +1792,10 @@ transition: bottom 300ms ease;
                   <div class="product-cart__price-current">  9900 р.     </div>
                   <div class="product-cart__price-old">12000 р.   </div>
                 </div><a class="product-cart__option js-option js-tab-link js-tab-link" href="#tab-3"><span>Выбрать опции</span></a>
-                <div class="product-cart__buy-wrapper"><a class="product-cart__to-cart" href="#">
-                    <svg class="icon icon-cart ">
-                      <use xlink:href="img/svgsprite/sprite.svg#cart"></use>
-                    </svg><span>В корзину</span></a><a class="product-cart__fast-buy" href="#">Купить в 1 клик   </a></div>
+                <div class="product-cart__buy-wrapper"><a class="product-cart__to-cart" href="#"><span>
+                      <svg class="icon icon-cart ">
+                        <use xlink:href="img/svgsprite/sprite.svg#cart"></use>
+                      </svg>В корзину </span></a><a class="product-cart__fast-buy" href="#"> <span>Купить в 1 клик   </span></a></div>
                 <div class="product-cart__shiping">
                   <div class="product-cart__shiping-item"><a class="js-tab-link js-option product-cart__shiping-name product-cart__shiping-name--semi" href="#tab-6"> <span>Самовывоз</span></a>
                     <div class="product-cart__shiping-text">
@@ -2009,7 +2009,10 @@ transition: bottom 300ms ease;
                     </div>
                   </div>
                   <div class="product-config__price-bottom">
-                    <div class="product-config__price-all">Итого: <span>67490 р. </span></div><a class="product-cart__to-cart product-cart__to-cart--config" href="#"><span>В корзину       </span></a>
+                    <div class="product-config__price-all">Итого: <span>67490 р. </span></div><a class="product-cart__to-cart product-cart__to-cart--config" href="#"><span>
+                        <svg class="icon icon-cart ">
+                          <use xlink:href="img/svgsprite/sprite.svg#cart"></use>
+                        </svg>В корзину  </span></a>
                   </div>
                 </div>
               </div><a class="product-tabs__mobile-tabs" href="#"><span class="product-tabs__mobile-name">Отзывы</span><span class="product-tabs__mobile-icon"></span></a>
@@ -2705,11 +2708,16 @@ transition: bottom 300ms ease;
         </div>
     </div>
     </div>
-<<<<<<< HEAD
 </footer>
 
-  </div>
-  <script src="js/libs.js"></script>
+  </div><!-- inject:js -->
+<script src="js/vendor/jquery-1.11.1.min.js"></script>
+<script src="js/vendor/lib/jquery.placeholder.min.js"></script>
+<script src="js/vendor/lib/object-fit-polyfill.js"></script>
+<script src="js/vendor/lib/respond.min.js"></script>
+<script src="js/vendor/lib/slick.min.js"></script>
+<!-- endinject -->
+
   <script src="js/common.js"></script><script type="text/javascript">
     $(window).on('load resize',function(){
         $('.footer_placeholder').css({
@@ -2718,15 +2726,4 @@ transition: bottom 300ms ease;
     })
 </script>
 
-=======
-    <footer class="wrapper footer" id="footer">
-      <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-    </footer>
-  </div><!-- inject:js -->
-<!-- endinject -->
-<!-- build:js -->
-  <script src="js/libs.js"></script>
-  <script src="//localhost:35729/livereload.js"></script><!-- endbuild -->
-  <script src="js/common.js"></script>
->>>>>>> db6febb3900e091d957c1832e039cc5f3c34885c
 </html>

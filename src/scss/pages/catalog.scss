@@ -70,12 +70,21 @@
         display: flex;
         align-items: center;
 
-        span {
+        .catalog-main__list-link-count {
             display: inline-block;
             margin-left: 5px;
             // @include position(absolute, 5px 0 null null);
             color: #bababa;
             font-size: 12px;
+        }
+        &:hover{
+            text-decoration: none;
+            .catalog-main__list-link-name{
+                text-decoration: underline;
+            }
+            span{
+                // text-decoration: none !important;
+            }
         }
     }
 
@@ -257,26 +266,31 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     &__item-buy-fast {
         color: #186c91;
-        position: relative;
+
         text-decoration: none;
         font-size: 14px;
         margin-top: 4px;
         margin-bottom: 10px;
-
-        &:before {
-            content: '';
-            width: 100%;
-            height: 1px;
-            background: url("../img/border.jpg");
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        span{
+            position: relative;
+            &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: url("../img/border.jpg");
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
+
+
     }
 
     &__sort {

@@ -2,50 +2,60 @@
     .sidebar
     .right-column-main
         .catalog-main
-            include breadcrumbs.pug
+            include breadcrumbs-catalog.pug
             .catalog-main__title Тахометры Leiсa
             .catalog-main__banner
                 img(src="img/banner.jpg" alt="")    
             ul.catalog-main__list
                 - for (var i = 0; i < 3 ; i++)
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Штативы <span>35</span>
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Штативы 
+                            span.catalog-main__list-link-count 35
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Рейки <span>35</span>
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Рейки 
+                            span.catalog-main__list-link-count 35
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Дорожные рейки <span>35</span> 
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Дорожные рейки 
+                            span.catalog-main__list-link-count 35 
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Угломеры и уклономеры <span>35</span> 
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Угломеры и уклономеры 
+                            span.catalog-main__list-link-count 35 
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Измерительные рулетки <span>35</span> 
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Измерительные рулетки 
+                            span.catalog-main__list-link-count 35 
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Литература <span>35</span>
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Литература 
+                            span.catalog-main__list-link-count 35
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Спецодежда <span>35</span>
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Спецодежда 
+                            span.catalog-main__list-link-count 35
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Аккумуляторы и ЗУ <span>35</span>
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Аккумуляторы и ЗУ 
+                            span.catalog-main__list-link-count 35
                     li.catalog-main__list-item
-                        a(href="#").catalog-main__list-link.
-                            Карты памяти <span>35</span>   
+                        a(href="#").catalog-main__list-link
+                            span.catalog-main__list-link-name Карты памяти 
+                            span.catalog-main__list-link-count 35   
             .catalog-main__sort
                 .catalog-main__sort-item
-                    .catalog-main__sort-name Сортировать:
+                    .catalog-main__sort-name Сортировать по:
+                    .catalog-main__sort-name.catalog-main__sort-name--mobile по:
                     .catalog-main__sort-drop-wrap
                         a(href="#").catalog-main__sort-link.js-show-drop    
-                            span по цене
+                            span цене
                             +icon('drop')
                         .catalog-main__sort-dropdowm
-                            a(href="#").catalog-main__sort-dropdowm-link по цене (по убыванию)
-                            a(href="#").catalog-main__sort-dropdowm-link по цене (по убыванию)
-                            a(href="#").catalog-main__sort-dropdowm-link по бренду
+                            a(href="#").catalog-main__sort-dropdowm-link цене &#8593
+                            a(href="#").catalog-main__sort-dropdowm-link цене &#8595
+                            a(href="#").catalog-main__sort-dropdowm-link бренду
                 .catalog-main__sort-item
                     .catalog-main__sort-name Показывать по:
                     .catalog-main__sort-name.catalog-main__sort-name--mobile по:
@@ -53,7 +63,7 @@
                         a(href="#").catalog-main__sort-link.js-show-drop    
                             span 12
                             +icon('drop')
-                        .catalog-main__sort-dropdowm.catalog-main__sort-dropdowm--right
+                        .catalog-main__sort-dropdowm.catalog-main__sort-dropdowm--
                             a(href="#").catalog-main__sort-dropdowm-link 12
                             a(href="#").catalog-main__sort-dropdowm-link 24
                             a(href="#").catalog-main__sort-dropdowm-link 36        
@@ -86,10 +96,13 @@
                                     сравнить    
                             .catalog-main__item-buy-bottom
                                 a(href="#").product-cart__to-cart.product-cart__to-cart--catalog
-                                    +icon('cart')
-                                    span В корзину            
-                                a(href="#").catalog-main__item-buy-fast.
-                                    Купить в 1 клик
+                                    
+                                    span
+                                        +icon('cart')
+                                        | В корзину            
+                                a(href="#").catalog-main__item-buy-fast
+                                    span.
+                                        Купить в 1 клик
                     .catalog-main__item
                         a(href="#").catalog-main__item-image
                             img(src="img/accessories/2.jpg" alt="")
@@ -113,10 +126,13 @@
                                     сравнить    
                             .catalog-main__item-buy-bottom
                                 a(href="#").product-cart__to-cart.product-cart__to-cart--catalog
-                                    +icon('cart')
-                                    span В корзину            
-                                a(href="#").catalog-main__item-buy-fast.
-                                    Купить в 1 клик 
+                                    
+                                    span
+                                        +icon('cart')
+                                        | В корзину            
+                                a(href="#").catalog-main__item-buy-fast
+                                    span.
+                                        Купить в 1 клик 
                     .catalog-main__item
                         a(href="#").catalog-main__item-image
                             img(src="img/accessories/3.jpg" alt="")
@@ -140,10 +156,13 @@
                                     сравнить    
                             .catalog-main__item-buy-bottom
                                 a(href="#").product-cart__to-cart.product-cart__to-cart--catalog
-                                    +icon('cart')
-                                    span В корзину            
-                                a(href="#").catalog-main__item-buy-fast.
-                                    Купить в 1 клик   
+                                    
+                                    span
+                                        +icon('cart')
+                                        | В корзину            
+                                a(href="#").catalog-main__item-buy-fast
+                                    span.
+                                        Купить в 1 клик   
                     .catalog-main__item
                         .catalog-main__status
                             .catalog-main__status-name.catalog-main__status-name--blue.
@@ -170,8 +189,11 @@
                                     сравнить    
                             .catalog-main__item-buy-bottom
                                 a(href="#").product-cart__to-cart.product-cart__to-cart--catalog
-                                    +icon('cart')
-                                    span В корзину            
-                                a(href="#").catalog-main__item-buy-fast.
-                                    Купить в 1 клик    
+                                    
+                                    span
+                                        +icon('cart')
+                                        | В корзину            
+                                a(href="#").catalog-main__item-buy-fast
+                                    span.
+                                        Купить в 1 клик    
             include pagination.html

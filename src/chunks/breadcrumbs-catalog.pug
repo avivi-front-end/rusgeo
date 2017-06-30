@@ -1,0 +1,6 @@
+a(href="#").breadcrumbs-new__back Назад
+ul.breadcrumbs-new.breadcrumbs-new--catalog
+    - var list = [ 'Главная страница', 'Геодезическое оборудование', 'Теодолиты', 'Электронные теодолиты', 'RGK', 'RGK T-05 (лазерный отвес)' ]
+    each listitem in list
+        li.breadcrumbs-new__item
+            a(href="#").breadcrumbs-new__link= listitem    

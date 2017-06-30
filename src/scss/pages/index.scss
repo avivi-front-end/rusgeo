@@ -26,6 +26,26 @@ body {
     padding: 8px 0 12px;
     flex-wrap: wrap;
 
+    &__back{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: inline-block;
+        &:before{
+            content:'\2190';
+            display: inline-block;
+            margin-right: 10px;
+        }
+        @media (min-width: $screen-md-min){
+            display: none;
+        }
+    }
+
+    &--catalog{
+        @media (max-width: $screen-sm-max){
+            display: none;
+        }
+    }
+
     &__item {
         &:not(:last-child) {
             &:after {
@@ -271,9 +291,12 @@ body {
     }
 
     &__buy-wrapper {
-        @media (max-width: $screen-sm-max) {
-            display: flex;
-            flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 27px;
+        @media (max-width: $screen-xs-max) {
+
             justify-content: center;
             margin-bottom: 30px;
         }
@@ -286,15 +309,15 @@ body {
         display: inline-block;
         padding: 9px 37px 12px 0;
         text-decoration: none;
-        margin-bottom: 27px;
+        margin-bottom: 5px;
         margin-right: 27px;
         text-decoration: none;
         border: 2px solid #186c91;
         transition: 0.2s ease;
 
         &--catalog {
-            margin-right: 0;
-            margin-bottom: 8px;
+            margin-right: 15px;
+            // margin-bottom: 8px;
             width: 100%;
             justify-content: center;
             display: flex;
@@ -331,9 +354,13 @@ body {
                 fill: #186c91;
             }
         }
-        @media (max-width: $screen-sm-max) {
-            width: 100%;
+        @media (max-width: $screen-sm-max){
+            width: 50%;
             text-align: center;
+        }
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+
             margin-right: 0;
         }
     }
@@ -342,21 +369,26 @@ body {
         text-decoration: none;
         font-size: 16px;
         color: #186c91;
-        position: relative;
+        margin-bottom: 5px;
 
-        &:before {
-            content: '';
-            width: 100%;
-            height: 1px;
-            background: url("../img/border.jpg");
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        span{
+            position: relative;
+            &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: url("../img/border.jpg");
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
+
+
         &:hover{
             text-decoration: none;
-            &:before{
+            span:before{
                 opacity: 0;
             }
         }

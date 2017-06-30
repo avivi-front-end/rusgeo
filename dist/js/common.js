@@ -359,18 +359,7 @@ var tabs = (function() {
     var desktop = $('.js-tab-link');
     var option = $('.js-option');
 
-    option.on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        // console.log($(this).attr('href'));
 
-        $('html, body').animate({
-            scrollTop: $('.product-tabs').offset().top
-        }, 500);
-        setTimeout(function() {
-            $('.js-tab-link[href="' + $this.attr() + '"]').addClass('active')
-        }, 10)
-    })
 
     mobile.on('click', function(e) {
         e.preventDefault();
@@ -395,6 +384,18 @@ var tabs = (function() {
         $('.product-tabs__item').hide();
 
         $(tabTarget).show()
+    })
+
+    option.on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+
+        $('html, body').animate({
+            scrollTop: $('.product-tabs').offset().top
+        }, 500);
+        setTimeout(function() {
+            $('.js-tab-link[href="' + $this.attr('href') + '"]').addClass('active')
+        }, 100)
     })
 })()
 
